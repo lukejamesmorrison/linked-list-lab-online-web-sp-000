@@ -77,9 +77,8 @@ function deleteNodeAt(index, linkedList, collection)
   {
     beforeNode = currentNode;
     currentNode = next(currentNode, collection);
-  }
+  };
   beforeNode.next = currentNode.next;
-
 
   //  2n solution
   // let beforeNode = nodeAt(index-1, linkedList, collection);
