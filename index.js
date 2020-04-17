@@ -71,11 +71,8 @@ function insertNodeAt(index, newName, linkedList, collection)
 function deleteNodeAt(index, linkedList, collection)
 {
   // n solution
-
   let beforeNode;
-
   let currentNode = headNode(linkedList, collection);
-
   for(let i = 0; i < index; i++)
   {
     beforeNode = currentNode;
