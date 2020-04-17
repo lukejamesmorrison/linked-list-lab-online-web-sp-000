@@ -70,10 +70,24 @@ function insertNodeAt(index, newName, linkedList, collection)
 
 function deleteNodeAt(index, linkedList, collection)
 {
-  let beforeNode = nodeAt(index-1, linkedList, collection);
-  // let afterNode = next(beforeNode, collection);
-  let afterNodeAddress = addressAt(index+1, linkedList, collection);
+  // n solution
+
+  let beforeNode;
+
+  let currentNode = headNode(linkedList, collection);
+
+  for(let i = 0; i < index; i++)
+  {
+    beforeNode = currentNode;
+    currentNode = next(currentNode, collection);
+  }
+  beforeNode.next = currentNode.next;
+
+
+  //  2n solution
+  // let beforeNode = nodeAt(index-1, linkedList, collection);
+  // let afterNodeAddress = addressAt(index+1, linkedList, collection);
 
   // update before node pointer
-  beforeNode.next = afterNodeAddress;
+  // beforeNode.next = afterNodeAddress;
 }
